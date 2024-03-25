@@ -1,3 +1,4 @@
+# create historgram for each pixel band to find out the frequency. However since these are thousands of pixels. Better representation is line graph.
 import os
 #GDAL requires coordinate system so set the env path proj\proj.db, also point to GDAL data
 os.environ['PROJ_LIB'] = '.\\Lib\\site-packages\\osgeo\\data\\proj'
@@ -89,7 +90,8 @@ def draw_histogram(hist, scale=True):
             t.goto((x, y))
 
 
-im = "..\\RawFiles\\swapped_band_files\\swap.tif"
+# im = "..\\RawFiles\\swapped_band_files\\swap.tif"
+im = "..\\RawFiles\\swapped_band_files\\stretched.tif"            
 histograms = []
 arr = gdal_array.LoadFile(im)
 for b in arr:

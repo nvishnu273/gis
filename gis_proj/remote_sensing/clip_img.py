@@ -51,7 +51,7 @@ raster = "..\\..\\ProcessedFiles\\stretched.tif"
 shp = "hancock"
 # Name of clipped raster file(s)
 output = "clipped"
-# Load the source data as a gdal_array array
+# Load the source data as a gdal_array numpy array
 srcArray = gdal_array.LoadFile(raster)
 
 # Also load the image as GDAL image (because GDAL Array does not do geotransformation) and then convert it into coordinate pixels
